@@ -1,6 +1,6 @@
 # A Unigram NLP Model to Predict Salary from Job Description Text
 
-This project establishes a 1-gram language model to predict salary from job description text. 
+This project establishes a unigram language model to predict salary from job description text. 
 
 ## N-gram Language Model
 
