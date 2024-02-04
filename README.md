@@ -1,16 +1,20 @@
-## A Unigram NLP Model to Predict Salary from Job Description Text
+# A Unigram NLP Model to Predict Salary from Job Description Text
 
 This project establishes a 1-gram language model to predict salary from job description text. 
 
-### N-gram Language Model
+## N-gram Language Model
 
-n-grams: An n-gram is a contiguous sequence of n items from a given sample of text or speech. For example, in the sentence "The cat sat on the mat", the 2-grams (bigrams) would be "The cat", "cat sat", "sat on", "on the", "the mat".
+### n-grams 
+An n-gram is a contiguous sequence of n items from a given sample of text or speech. For example, in the sentence "The cat sat on the mat", the 2-grams (bigrams) would be "The cat", "cat sat", "sat on", "on the", "the mat".
 
-Probability Estimation: The probability of each n-gram is calculated based on its frequency in the training corpus. For a unigram model (where n=1), the probability of a word occurring is simply its frequency divided by the total number of words in the corpus.
+### Probability Estimation:
+The probability of each n-gram is calculated based on its frequency in the training corpus. For a unigram model (where n=1), the probability of a word occurring is simply its frequency divided by the total number of words in the corpus.
 
-Smoothing/Laplace Smoothing: Since some n-grams may not appear in the training corpus, smoothing techniques are used to assign them a small, non-zero probability. This prevents the model from assigning a zero probability to unseen words or sequences when predicting the next item in a sequence.
+### Smoothing/Laplace Smoothing:
+Since some n-grams may not appear in the training corpus, smoothing techniques are used to assign them a small, non-zero probability. This prevents the model from assigning a zero probability to unseen words or sequences when predicting the next item in a sequence.
 
-Backoff and Interpolation: These techniques are used to handle cases where higher-order n-grams (with larger n) are not found. The model can "back off" to using lower-order n-grams, or use interpolation to combine probabilities from different orders.
+### Backoff and Interpolation:
+These techniques are used to handle cases where higher-order n-grams (with larger n) are not found. The model can "back off" to using lower-order n-grams, or use interpolation to combine probabilities from different orders.
 
 N-gram models have a wide range of applications in NLP, including:
 Text Prediction - Used in predictive text input systems, like those on smartphones, to suggest the next word.
@@ -21,27 +25,27 @@ Information Retrieval - Used to improve search engine results by considering the
 
 The unigram model is a type of language model based on the assumption that each word (or token) in a document or sentence occurs independently of the others. It is the simplest form of an n-gram model, where "n" refers to the number of words considered as a context. unigram model is an n-gram model where n=1. This model is fast and fairly accurate but ignores the order and context of the text, which can limit the effectiveness of the model. In the code, it is possible to change the ngrams parameter of TMEF-dfm in line 52 to turn the model into a language model with higher n dimensions. n=2 was tried and the runtime increased exponentially with little performance improvement.
 
-### Model Result
+## Model Result
 
-#### Coefficient Distribution
+### Coefficient Distribution
 
 ![Coefficient in Model](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/af444eb0-5401-45a8-ad27-e020b4982dd2)
 
-#### LASSO MSE
+### LASSO MSE
 
 ![Lasso MSE](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/86f87dea-468e-4d17-affd-3a5dbfb49e7b)
 
 It should be noticed that the astronomical numbers in MSE (y-axis) seem weird but make sense because we are predicting the salary, which is a large number. For example, if the salary is predicted as 30000 for a true value of 100000, the error is 70000 and the corresponding MSE is 70000^2. The result would be 4.9*10^9, similar to the value in our MSE plot.
 
-#### Accuracy (74.84%)
+### Accuracy (74.84%)
 
 ![Accuracy](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/18e213df-0ff4-48da-a05a-c3d4cf145573)
 
-### Interpretation
+## Interpretation
 
 Model trained with 8000 random rows and tested with 2000 random rows of the dataset (set.seed(0)).
 
-#### Greatest prediction samples for predicting high salary
+### Greatest prediction samples for predicting high salary
 
 [1] "Sales Executive Channel Manager IP/Ethernet Networking COMPANY PROFILE Our client is a world class leader in delivering IP/Ethernet network solutions Internationally. In Europe they have **** distribution partners supporting over **** VARs, Resellers and SIs and also OEM partners. They create IP networks that seamlessly connect voice, data and video services. Enterprise customers can build complete endtoend networking solutions through a single vendor, with coretoedge technologies ranging from powerful **** Gigabit Layer **** switches right through to media converters. Service Providers use our wide range of access, aggregation and backbone solutions. The products range from industry leading media gateways which allow voice, video and data services to be delivered to the home and business, right through to highend chassisbased platforms providing significant network infrastructure. INDUSTRY KNOWLEDGE Wide Area Network (WAN) connectivity. Core Network Solutions LAN Security Fiber Connectivity IP Video Surveillance IP Triple Play Voice over IP Broadband Access Ethernet Transport IPv**** **** Gigabit Wireless THE ROLE The challenge now is to increase the existing success stories into well published and compelling solutions for the mid to large market. Driving structure into the current channel and developing new and effective routes to market to accelerate growth. A key part of..." (Prediction 73727.86 / Normalized 80000)
 
