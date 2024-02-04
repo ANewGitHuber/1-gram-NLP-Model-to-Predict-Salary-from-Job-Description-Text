@@ -23,15 +23,17 @@ The unigram model is a type of language model based on the assumption that each 
 
 ### Model Result
 
-Coefficient Distribution
+#### Coefficient Distribution
 
 ![Coefficient in Model](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/af444eb0-5401-45a8-ad27-e020b4982dd2)
 
-LASSO MSE
+#### LASSO MSE
 
 ![Lasso MSE](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/86f87dea-468e-4d17-affd-3a5dbfb49e7b)
 
-Accuracy
+It should be noticed that the astronomical numbers in MSE (y-axis) seem weird but make sense because we are predicting the salary, which is a large number. For example, if the salary is predicted as 30000 for a true value of 100000, the error is 70000 and the corresponding MSE is 70000^2. The result would be 4.9*10^9, similar to the value in our MSE plot.
+
+#### Accuracy (74.84%)
 
 ![Accuracy](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/18e213df-0ff4-48da-a05a-c3d4cf145573)
 
