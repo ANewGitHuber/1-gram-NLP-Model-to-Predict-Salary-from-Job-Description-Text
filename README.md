@@ -24,18 +24,22 @@ The unigram model is a type of language model based on the assumption that each 
 ### Model Result
 
 Coefficient Distribution
+
 ![Coefficient in Model](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/af444eb0-5401-45a8-ad27-e020b4982dd2)
 
 LASSO MSE
+
 ![Lasso MSE](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/86f87dea-468e-4d17-affd-3a5dbfb49e7b)
 
 Accuracy
+
 ![Accuracy](https://github.com/ANewGitHuber/A-Unigram-NLP-Model-to-Predict-Salary-from-Job-Description-Text/assets/88078123/18e213df-0ff4-48da-a05a-c3d4cf145573)
 
 ### Interpretation
 
 #### Two great prediction samples for predicting high salary
 [1] "Sales Executive Channel Manager IP/Ethernet Networking COMPANY PROFILE Our client is a world class leader in delivering IP/Ethernet network solutions Internationally. In Europe they have **** distribution partners supporting over **** VARs, Resellers and SIs and also OEM partners. They create IP networks that seamlessly connect voice, data and video services. Enterprise customers can build complete endtoend networking solutions through a single vendor, with coretoedge technologies ranging from powerful **** Gigabit Layer **** switches right through to media converters. Service Providers use our wide range of access, aggregation and backbone solutions. The products range from industry leading media gateways which allow voice, video and data services to be delivered to the home and business, right through to highend chassisbased platforms providing significant network infrastructure. INDUSTRY KNOWLEDGE Wide Area Network (WAN) connectivity. Core Network Solutions LAN Security Fiber Connectivity IP Video Surveillance IP Triple Play Voice over IP Broadband Access Ethernet Transport IPv**** **** Gigabit Wireless THE ROLE The challenge now is to increase the existing success stories into well published and compelling solutions for the mid to large market. Driving structure into the current channel and developing new and effective routes to market to accelerate growth. A key part of"...
+
 [2] "General Derivatives Lawyer Our client is one of the world's leading investment banks. Their worldrenowned legal division provides comprehensive legal support to all areas of the investment bank and has lawyers based across the globe. The crossderivatives group provides strategic and transactional legal coverage to the firm's derivatives and trading businesses in London. The legal department's coverage model allows the firm's lawyers to specialise whilst maintaining diversity of practice and the flexibility to develop new areas of expertise, thereby meeting changing business needs and enhancing the lawyer's own career development. Currently, the derivatives legal team seeks a crossderivatives lawyer with a sound instinct for risk management, who knows when to escalate, can integrate with other core risk functions, and articulates the firm's governance and risk policies. Typically a lawyer will be assigned up to three distinct areas within the crossderivatives group at any time. These are expected to change periodically. The main function of the role is to be a cross product derivatives lawyer in the derivatives legal team covering a range of different asset classes (which may include credit and equity derivatives, fixed income rates and FX). The lawyer will provide legal support to the respective trading and structuring"...
 
 
